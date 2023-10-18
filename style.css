@@ -96,6 +96,14 @@ input[type="number"] {
     outline: none;
 }
 
+.output{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+}
+
 .cross{
     display: flex;
     position: absolute;
