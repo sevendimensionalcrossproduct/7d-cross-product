@@ -78,10 +78,45 @@ input[type="number"] {
     display: flex;
     position: absolute;
     left: 30vh;
+    top: 45vh;
     font-size: 4.4vh;
     color: rgb(45,45,45);
     text-shadow: 0.15vh 0.25vh 0.5vh rgba(20,20,20,0.7);
 }
 
+button{
+	display: flex;
+	
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	
+	left: 120vh; top: 45vh;
+	height: 10vh; width: 10vh;
+	
+	font-size: 8vh;
+    	text-shadow: 0.15vh 0.25vh 0.5vh rgba(20,20,20,0.7);
+	box-shadow: 0.2vh 0.7vh 1vh rgba(35,35,35,0.6);
+	
+	
+	color: white;
+    
+	background-image: linear-gradient(45deg,
+	rgb(0, 140, 255),
+	rgb(146, 1, 146),
+    	rgb(247, 83, 83),
+    	rgb(255, 136, 0));
+	
+	cursor: pointer;
+	border: none;
+	outline: 0.4vh solid;
+	outline-color: rgb(255,255,255);
+	border-radius: 6vh;	
+	transition: transform 1.0s;
+}
 
+button:hover{
+   transform: scale(1.1);
+   transition: all 1s;
+}
 
