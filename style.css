@@ -13,26 +13,8 @@ body{
     overflow: hidden;
     margin: 0;
 }
-input[type="number"] {
-    display: flex;
-    margin-bottom: 1vh;
-    text-align: center;
-    padding: 1vh;
-    height: 9vh;
-    width: 10vh;
-    border: 1px solid #ccc;
-    border-radius: 22vh;
-    background-color: white;
-    color: #333;
-    font-size: 3vh;
-}
-
-.text {
-	position: absolute;
-	z-index: 1;
-}
-
 .bg {
+    position: absolute;
     width: 100%;
     z-index: -1;
     height: 100vh; /* Adjust the size as needed */
@@ -54,4 +36,52 @@ input[type="number"] {
         background-position: 100% 100%;
     }
 }
+
+.glass{
+	display: flex;
+	flex-direction: column;
+	padding: 3vh;
+	border: 0.2vh solid rgba(20,20,20,0.1);
+	border-radius: 5vh;
+	box-shadow: 0.2vh 0.7vh 1vh rgba(35,35,35,0.7);
+	backdrop-filter: blur(2vh);
+	-webkit-backdrop-filter: blur(2vh);
+	background: rgba(255, 255, 255, 0.3);
+}
+
+#x{
+	position: absolute;
+	left:25vh;
+}
+#y{
+	position: absolute;
+	left:75vh;
+}
+
+input[type="number"] {
+    display: flex;
+    margin-bottom: 1vh;
+    text-align: center;
+    padding: 1vh;
+    height: 9vh;
+    width: 10vh;
+    border: 0.4vh solid #ccc;
+    border-radius: 22vh;
+    box-shadow: 0.2vh 0.5vh 1vh rgba(55,55,55,0.3);
+    background-color: white;
+    color: #333;
+    font-size: 3vh;
+    outline: none;
+}
+
+.cross{
+    display: flex;
+    position: absolute;
+    left: 30vh;
+    font-size: 4.4vh;
+    color: rgb(45,45,45);
+    text-shadow: 0.15vh 0.25vh 0.5vh rgba(20,20,20,0.7);
+}
+
+
 
