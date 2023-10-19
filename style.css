@@ -122,14 +122,14 @@ input[type="number"] {
 	text-shadow: 0.10vh 0.25vh 0.5vh rgba(20,20,20,0.6);
 	font-size: 3vh;
 
-	animation: fadeIn linear 0.7s;
+	animation: fadeIn cubic-bezier(0, 0, .58, 1) 0.45s;
 	transition: ease;
 }
 
 @keyframes fadeIn{
-    0%{
-    visibility: hidden;
-    opacity: 0;}
+    0%{transform: translateY(0vh);}
+    50%{transform: translateY(-1.5vh);}
+    100%{transform: translateY(0vh);}
 }
 
 .cross{
