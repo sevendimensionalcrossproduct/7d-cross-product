@@ -158,36 +158,31 @@ input[type="number"] {
 	box-shadow: 0 -1vh 1vh 0 rgba(35,35,35,0.4);
 }
 
-button{
-	display: flex;
-	
-	position: absolute;
-	justify-content: center;
-	align-items: center;
-	
-	left: 110vh; top: 45vh;
-	height: 10vh; width: 10vh;
-	
-	font-size: 8vh;
-    	text-shadow: 0.15vh 0.25vh 0.5vh rgba(20,20,20,0.7);
-	box-shadow: 0.2vh 0.7vh 1vh rgba(35,35,35,0.6);
-	
-	
-	color: white;
-    
-	background-image: linear-gradient(45deg,
-	rgb(255, 148, 175),
-	rgb(255, 199, 235),
-    	rgb(166, 167, 255),
-    	rgb(196, 232, 255));
-	
-	cursor: pointer;
-	border: none;
-	outline: 0.4vh solid;
-	outline-color: rgb(255,255,255);
-	border-radius: 6vh;	
-	transition: transform 1.0s;
+
+button {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  left: 110vh;
+  top: 45vh;
+  height: 10vh;
+  width: 10vh;
+  font-size: 8vh;
+  text-shadow: 0.15vh 0.25vh 0.5vh rgba(20, 20, 20, 0.7);
+  box-shadow: 0.2vh 0.7vh 1vh rgba(35, 35, 35, 0.6);
+  color: white;
+  background-image: linear-gradient(45deg, rgb(255, 148, 175), rgb(255, 199, 235), rgb(166, 167, 255), rgb(196, 232, 255));
+  cursor: pointer;
+  border: none;
+  outline: 0.4vh solid;
+  outline-color: rgb(255, 255, 255);
+  border-radius: 6vh;
+  transition: transform 1.0s;
+  background-size: 200% 100%; 
+  animation: move2 30s cubic-bezier(0.4,0,0.2,1) infinite;
 }
+
 
 button:hover{
    transform: scale(1.1);
@@ -219,4 +214,16 @@ button:focus::before {
     }
 }
 
+@keyframes move2 {
+  0% {
+    background-position: 0% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+
+  100%{
+    background-position: 0% 0;
+  }
+}
 
