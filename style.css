@@ -183,6 +183,18 @@ button {
   animation: move2 30s cubic-bezier(0.4,0,0.2,1) infinite;
 }
 
+#welcome{
+	display: flex;
+	width: 100%;
+	position: absolute;
+	color: rgb(255,0,60);
+	justify-content: center;
+	font-size: 3vh;	
+	align-items: center;
+	animation: flash 2s;
+	opacity: 0;
+	
+}
 
 button:hover{
    transform: scale(1.1);
@@ -227,3 +239,15 @@ button:focus::before {
   }
 }
 
+@keyframes flash{
+   0%{
+	opacity: 0;
+   }
+
+   50%{
+	opacity: 1;
+   }
+   100%{
+	opacity: 0;
+   }
+}
