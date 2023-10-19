@@ -37,7 +37,35 @@ body{
     }
 }
 
+.head{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 3vh;
+	position: absolute;
+	padding: 3vh;
+	border: 0.2vh solid rgba(20,20,20,0.1);
+	border-radius: 5vh;
+	box-shadow: 0.2vh 0.7vh 1vh rgba(35,35,35,0.7);
+    	background-image: radial-gradient(rgb(29, 28, 28),black);
+	outline: 0.4vh solid;
+	outline-color: rgb(255,255,255);
+	color: white;
+	width: 16vh;	
+}
+
+.t{
+	display: flex;
+	position: absolute;
+	font-size: 2.5vh;
+}
+
+#left{left: 25vh;}
+#right{left: 75vh;}
+#resultHead{left:140vh; width: 31vh;}
+
 .glass{
+	position: absolute;
 	display: flex;
 	flex-direction: column;
 	padding: 3vh;
@@ -49,20 +77,9 @@ body{
 	background: rgba(255, 255, 255, 0.3);
 }
 
-#x{
-	position: absolute;
-	left:25vh;
-}
-
-#y{
-	position: absolute;
-	left:75vh;
-}
-
-#result{
-	position: absolute;
-	left: 140vh;
-}
+#x{left:25vh;}
+#y{left:75vh;}
+#result{left: 140vh;}
 
 input[type="number"] {
     display: flex;
@@ -73,7 +90,6 @@ input[type="number"] {
     width: 10vh;
     border: 0.4vh solid #ccc;
     border-radius: 22vh;
-    text-shadow: 0.10vh 0.25vh 0.5vh rgba(20,20,20,0.6);
     box-shadow: 0.2vh 0.5vh 1vh rgba(55,55,55,0.3);
     background-color: white;
     color: #333;
@@ -119,7 +135,7 @@ input[type="number"] {
 .cross{
     display: flex;
     position: absolute;
-    left: 30vh;
+    left: 55vh;
     top: 45vh;
     font-size: 4.4vh;
     color: rgb(45,45,45);
@@ -133,7 +149,7 @@ input[type="number"] {
 	bottom: 0vh; height: 4.5vh; width: 100%;
 
 	background-image: radial-gradient(rgb(29, 28, 28),black);
-    	animation: move 40s cubic-bezier(0.4,0,0.2,1) infinite;
+    	animation: move 60s cubic-bezier(0.4,0,0.2,1) infinite;
     	background-size: 200% 200%;
     	background-repeat: no-repeat;
     	background-position: 0% 0%;
