@@ -48,16 +48,24 @@ function calculate_value(){
 function update_values(){
 	const values = calculate_value();
 	const output_elements = Array.from(document.querySelectorAll('.screen p'));
+
 	const animated = document.querySelector('.output');
 	const animatedElements = document.querySelectorAll('.output');
-	
-	
 
-    animatedElements.forEach((animated) => {
-        animated.classList.remove('output');
-        void animated.offsetWidth;
-        animated.classList.add('output');
-    });
+	const butt = document.querySelector('buttAnimate');
+	const butt2 = document.querySelectorAll('.buttAnimate');
+
+	butt2.forEach((butt) => {
+        	butt.classList.remove('buttAnimate');
+        	void butt.offsetWidth;
+        	butt.classList.add('buttAnimate');
+   	 });
+	
+	animatedElements.forEach((animated) => {
+        	animated.classList.remove('output');
+        	void animated.offsetWidth;
+        	animated.classList.add('output');
+   	 });
 
 	
 	for (var i = 0; i < 7; i++) {
@@ -70,6 +78,16 @@ function update_values(){
 }
 
 
+function reset() {
+  const erasables = document.getElementsByClassName('glass');
+  for (let j = 0; j < erasables.length; j++) {
+    const inputs = erasables[j].getElementsByTagName('input');
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].value = '';
+    }
+  }
+}
+
 
 document.querySelector('#button').addEventListener('click', update_values);
-
+document.querySelector('#reset').addEventListener('click', reset);
