@@ -1,7 +1,4 @@
 function seven_dimensional_cross_product(x, y) {
-    if (x.length !== 7 || y.length !== 7) {
-        console.error("bad usage");
-    }
     var result = [0, 0, 0, 0, 0, 0, 0];
     var _loop_1 = function (i) {
         var START = function (n) { return (i + n) % 7; };
@@ -18,28 +15,12 @@ function seven_dimensional_cross_product(x, y) {
     }
     return result;
 }
-function seven_dimensional_dot_product(x, y) {
-    if (x.length !== 7 || y.length !== 7) {
-        console.error("bad usage");
-    }
-    var result = 0;
-    for (var i = 0; i < 7; i++) {
-        result += x[i] * y[i];
-    }
-    return result;
-}
 
 function calculate_value(){
 	const x_values = Array.from(document.querySelectorAll('#x input')).map(input => parseFloat(input.value) || 0);
 	const y_values = Array.from(document.querySelectorAll('#y input')).map(input => parseFloat(input.value) || 0);
 
-	/*if(x_values.length !== 7 || y_values.length !== 7){
-		alert("bad usage");
-		return;
-	}*/
-
 	const result = seven_dimensional_cross_product(x_values, y_values);
-	console.log("hi");
 
 	return result;
 }
@@ -52,15 +33,12 @@ function update_values(){
 	const animated = document.querySelector('.output');
 	const animatedElements = document.querySelectorAll('.output');
 
-	const butt = document.querySelector('buttAnimate');
-	const butt2 = document.querySelectorAll('.buttAnimate');
+	const butt3 = document.getElementById('butt');
 
-	butt2.forEach((butt) => {
-        	butt.classList.remove('buttAnimate');
-        	void butt.offsetWidth;
-        	butt.classList.add('buttAnimate');
-   	 });
-	
+	butt3.classList.remove('buttAnimate');
+	void butt3.offsetWidth;
+	butt3.classList.add('buttAnimate');
+
 	animatedElements.forEach((animated) => {
         	animated.classList.remove('output');
         	void animated.offsetWidth;
