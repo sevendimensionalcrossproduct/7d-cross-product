@@ -19,22 +19,16 @@ function seven_dimensional_cross_product(x, y) {
 function calculate_value(){
 	const x_values = Array.from(document.querySelectorAll('#x input')).map(input => parseFloat(input.value) || 0);
 	const y_values = Array.from(document.querySelectorAll('#y input')).map(input => parseFloat(input.value) || 0);
-
 	const result = seven_dimensional_cross_product(x_values, y_values);
-
 	return result;
 }
 
 
 function update_values(){
-	const values = calculate_value();
-	const output_elements = Array.from(document.querySelectorAll('.screen p'));
-
-
-	const butt3 = document.getElementById('butt');
-	butt3.classList.remove('buttAnimate');
-	void butt3.offsetWidth;
-	butt3.classList.add('buttAnimate');
+	const button = document.getElementById('butt');
+	button.classList.remove('buttAnimate');
+	void button.offsetWidth;
+	button.classList.add('buttAnimate');
 	
 	const animatedElements = document.querySelectorAll('.output');
 	animatedElements.forEach((element) => {
@@ -43,13 +37,10 @@ function update_values(){
         	element.classList.add('output');
    	 });
 
-
+	const values = calculate_value();
+	const output_elements = Array.from(document.querySelectorAll('.screen p'));
 	for (var i = 0; i < 7; i++) {
-		if (values[i].toString().length > 13){
-			output_elements[i].textContent = "Too Long!!";
-		} else {
-		output_elements[i].textContent = values[i];
-		}
+		output_elements[i].textContent = (values[i].toString().length > 13 ? "Too Long!" : values[i]);
 	}
 }
 
