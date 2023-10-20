@@ -30,19 +30,17 @@ function update_values(){
 	const values = calculate_value();
 	const output_elements = Array.from(document.querySelectorAll('.screen p'));
 
-	const animated = document.querySelector('.output');
-	const animatedElements = document.querySelectorAll('.output');
 
 	const butt3 = document.getElementById('butt');
-
 	butt3.classList.remove('buttAnimate');
 	void butt3.offsetWidth;
 	butt3.classList.add('buttAnimate');
-
-	animatedElements.forEach((animated) => {
-        	animated.classList.remove('output');
-        	void animated.offsetWidth;
-        	animated.classList.add('output');
+	
+	const animatedElements = document.querySelectorAll('.output');
+	animatedElements.forEach((element) => {
+        	element.classList.remove('output');
+        	void element.offsetWidth;
+        	element.classList.add('output');
    	 });
 
 	
