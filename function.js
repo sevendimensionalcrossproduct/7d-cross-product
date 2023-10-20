@@ -43,7 +43,7 @@ function update_values(){
         	element.classList.add('output');
    	 });
 
-	
+
 	for (var i = 0; i < 7; i++) {
 		if (values[i].toString().length > 13){
 			output_elements[i].textContent = "Too Long!!";
@@ -55,13 +55,10 @@ function update_values(){
 
 
 function reset() {
-  const erasables = document.getElementsByClassName('glass');
-  for (let j = 0; j < erasables.length; j++) {
-    const inputs = erasables[j].getElementsByTagName('input');
-    for (let i = 0; i < inputs.length; i++) {
-      inputs[i].value = '';
-    }
-  }
+	const inputs = document.querySelectorAll('input');
+  	inputs.forEach((entry) => {
+		entry.value = '';	
+  	});
 }
 
 
