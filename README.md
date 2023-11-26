@@ -1,2 +1,2 @@
-# 7d crossproduct uwu
- A website that showcases seven dimensional cross products
+# Seven dimensional cross product calculator
+ A website that calculates seven dimensional cross products
